@@ -63,7 +63,9 @@
             <p>Follow along as we learn about using images in HTML, adding a favicon to a website, adding SVGs to HTML, adding a video to a web page, and creating a table with HTML.</p>
 
             <section id="images">
-                <h2>Adding Images to Your HTML</h2>
+                <h2><img src="images/your-image.jpg" alt="Description of the image">
+                    <img src="images/decorative-image.jpg" alt="" aria-hidden="true">
+                    </h2>
                 <p>There are a couple of reasons for adding images to your HTML. One reason is that you would like to add an image for decoration. This means that if you took it off the page, the user would still be able to use and understand the page fully, because the image isn't adding any information they won't have otherwise. The other reason is because you have images that are necessary content, and if you remove them from the page the user would be lost or missing needed information.</p>
 
                 <p>Images have two required attributes: <code>src</code>, which tells the browser where the image is and should use a relative link, and <code>alt</code>, which uses text to describe the image so that you could imagine what it looks like if you can't see it. Remember that if your image has any text in it, you have to include that in the alt text. It is also important to add the <code>height</code> and <code>width</code> attributes, as it improves the way your page looks as it loads. Ensure that those attributes are taken from the image, after editing and saving it at the correct size. Not respecting the aspect ratio will make your images look distorted on the screen.</p>
@@ -88,7 +90,16 @@
             </section>
 
             <section id="video">
-                <h2>Adding Video to Your HTML</h2>
+                <h2><video width="640" height="360" controls>
+                    <source src="videos/sample.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                    frameborder="0" allowfullscreen>
+                </iframe>
+                </h2>
                 <p>Many sites today use video, as it is something that audiences prefer. You can use multiple sources to allow the browser to play the one that it supports. This is especially handy if you are using a newer format, because you can also include older formats in case the user isn't in an updated browser. As with other resources on your site, you should use relative links for the <code>src</code> attribute.</p>
 
                 <section>
@@ -109,19 +120,44 @@
             </section>
 
             <section id="favicon">
-                <h2>Adding a Favicon to Your Web Page</h2>
+                <h2<link rel="icon" type="image/png" href="favicon.ico">
+                    /h2>
                 <p>A favicon serves a lot of purposes, as you saw in our lecture today. You can find the original png that we will use to create our favicon inside of the images folder. You can easily convert it to a favicon file type on the <a href="https://www.favicon-generator.org/" target="_blank">Favicon Generator website</a>. Be sure to select to only generate the 16x16 favicon with the options below the file upload.</p>
                 <p>Please follow the instructions in class to get this working.</p>
             </section>
 
             <section id="svg">
-                <h2>Using SVGs in HTML</h2>
+                <h2><svg width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+                </svg>
+                </h2>
                 <p>There are a few ways that you can add an SVG to your page with HTML, and today we'll practice pasting their code directly into our HTML. You can also use a link to the file as the <code>src</code> for an image tag, but pasting the code allows us to do more with CSS later. Vector images are best for graphics, because they are defined with math, and will display perfectly at any size, which saves time when they load on the page.</p>
                 <p>We are going to paste an SVG icon for Facebook into the footer below to practice this. Notice that I have added an <code>aria-label</code> attribute to the links wrapped around those icons. It is used when there isn't any link text, like when you wrap a link around the image.</p>
             </section>
 
             <section id="table">
-                <h2>Using Tables in HTML</h2>
+                <h2><table border="1">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Occupation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alice</td>
+                            <td>30</td>
+                            <td>Designer</td>
+                        </tr>
+                        <tr>
+                            <td>Bob</td>
+                            <td>25</td>
+                            <td>Developer</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </h2>
                 <p>In HTML, tables are used for tabular data. Think of data similar to a schedule or what you might find easier to read in a spreadsheet format. Tables can cause issues on smaller screens, as they aren't responsive, so consider that if you add them to a page. If they will be small enough to fit on the screen, even with their data, you should be fine.</p>
                 <table>
                     <!-- TO DO: Complete the code below to create a caption for this table -->
